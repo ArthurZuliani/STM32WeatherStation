@@ -2,7 +2,7 @@
 
 The objective of this repository is to share code solution for Weather Station Phase1 and Phase2. This task was developed to use the microcontroller `STM32L052K6`.
 
-This code purpose is to assess knowledge regarding C language and the microcontroller specifics. If you have any suggestion or feedback, please reachout through [issues](https://github.com/ArthurZuliani/STM32L052WeatherStation/issues/new) tab.
+This code purpose is to assess knowledge regarding C language and the microcontroller specifics. If you have any suggestion or feedback, please reachout through [issues](https://github.com/ArthurZuliani/STM32WeatherStation/issues/new) tab.
 
 ## Phase 1 - A little more hardware-based
 
@@ -26,11 +26,11 @@ This code purpose is to assess knowledge regarding C language and the microcontr
 
 This section is to share code snippets that might help you during your code analysis.
 
-1. CPU board does not have a hardware to handle USB indexation in Windows. So, a [workaround](https://github.com/ArthurZuliani/STM32L052WeatherStation/blob/786d33fccac50aa0f750f59036ca9f9aeae11dcb/WS2022_TP16_Phase1_Solution/USB_DEVICE/App/usb_device.c#L69) is to reset `DP` pin before initialize the microcontroller to use USB.
+1. CPU board does not have a hardware to handle USB indexation in Windows. So, a [workaround](https://github.com/ArthurZuliani/STM32WeatherStation/blob/06770d298640cae5f74216863db1b754b39d3986/WS2022_TP16_Phase1_Solution/USB_DEVICE/App/usb_device.c#L68) is to reset `DP` pin before initialize the microcontroller to use USB.
 
-2. An important skill in C is to know how to use variables from other files/libraries through [`extern`](https://github.com/ArthurZuliani/STM32L052WeatherStation/blob/786d33fccac50aa0f750f59036ca9f9aeae11dcb/WS2022_TP16_Phase1_Solution/USB_DEVICE/App/usbd_cdc_if.c#L54) keyword. It gives freedom to share values in the project, and mainly, to organize your code in multiple files.
+2. An important skill in C is to know how to use variables from other files/libraries through [`extern`](https://github.com/ArthurZuliani/STM32WeatherStation/blob/06770d298640cae5f74216863db1b754b39d3986/WS2022_TP16_Phase1_Solution/USB_DEVICE/App/usbd_cdc_if.c#L53) keyword. It gives freedom to share values in the project, and mainly, to organize your code in multiple files.
 
-3. Sometimes `string` manipulation looks complicated in C codes. However, if you have a good understand of standards libraries, you can use them in your [favor](https://github.com/ArthurZuliani/STM32L052WeatherStation/blob/786d33fccac50aa0f750f59036ca9f9aeae11dcb/WS2022_TP16_Phase1_Solution/USB_DEVICE/App/usbd_cdc_if.c#L271) to communicate easily through USB.
+3. Sometimes `string` manipulation looks complicated in C codes. However, if you have a good understand of standards libraries, you can use them in your [favor](https://github.com/ArthurZuliani/STM32WeatherStation/blob/06770d298640cae5f74216863db1b754b39d3986/WS2022_TP16_Phase1_Solution/USB_DEVICE/App/usbd_cdc_if.c#L270) to communicate easily through USB.
 
 ## Phase 2 - Weather Station using AHT20
 
@@ -68,13 +68,13 @@ This section is to share code snippets that might help you during your code anal
 
 This section is to share code snippets that might help you during your code analysis.
 
-1. Know ASCII is essential, or at least understand how to [compare](https://github.com/ArthurZuliani/STM32L052WeatherStation/blob/786d33fccac50aa0f750f59036ca9f9aeae11dcb/WS2022_TP16_Phase2_Solution/USB_DEVICE/App/usbd_cdc_if.c#L273) values using ASCII characters in C.
+1. Know ASCII is essential, or at least understand how to [compare](https://github.com/ArthurZuliani/STM32WeatherStation/blob/06770d298640cae5f74216863db1b754b39d3986/WS2022_TP16_Phase2_Solution/USB_DEVICE/App/usbd_cdc_if.c#L273) values using ASCII characters in C.
 
-2. `Cortex-M0` does not support unaligned `read/write` [operations](https://github.com/ArthurZuliani/STM32L052WeatherStation/blob/786d33fccac50aa0f750f59036ca9f9aeae11dcb/WS2022_TP16_Phase2_Solution/Core/Src/main.c#L120).
+2. `Cortex-M0` does not support unaligned `read/write` [operations](https://github.com/ArthurZuliani/STM32WeatherStation/blob/06770d298640cae5f74216863db1b754b39d3986/WS2022_TP16_Phase2_Solution/Core/Src/main.c#L118).
 
-3. Enum are very powerful to handle `state machines` and also to handle selectable options. However, how can you [share](https://github.com/ArthurZuliani/STM32L052WeatherStation/blob/786d33fccac50aa0f750f59036ca9f9aeae11dcb/WS2022_TP16_Phase2_Solution/USB_DEVICE/App/usbd_cdc_if.c#L53) them among different files?
+3. Enum are very powerful to handle `state machines` and also to handle selectable options. However, how can you [share](https://github.com/ArthurZuliani/STM32WeatherStation/blob/06770d298640cae5f74216863db1b754b39d3986/WS2022_TP16_Phase2_Solution/USB_DEVICE/App/usbd_cdc_if.c#L52) them among different files?
 
-4. `string` manipulation and special characters can help a lot when multiple reports are necessary. Sometimes it is about copy+paste and adjust formatting (Sometimes [ternary](https://github.com/ArthurZuliani/STM32L052WeatherStation/blob/786d33fccac50aa0f750f59036ca9f9aeae11dcb/WS2022_TP16_Phase2_Solution/Core/Src/main.c#L343) operators can be useful).
+4. `string` manipulation and special characters can help a lot when multiple reports are necessary. Sometimes it is about copy+paste and adjust formatting (Sometimes [ternary](https://github.com/ArthurZuliani/STM32WeatherStation/blob/06770d298640cae5f74216863db1b754b39d3986/WS2022_TP16_Phase2_Solution/Core/Src/main.c#L343) operators can be useful).
 
 ---
 
