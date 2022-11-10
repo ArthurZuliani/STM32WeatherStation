@@ -68,7 +68,7 @@ This section is to share code snippets that might help you during your code anal
 
 This section is to share code snippets that might help you during your code analysis.
 
-1. Know ASCII is essential, or at least understand how to [compare](https://github.com/ArthurZuliani/STM32L052WeatherStation/blob/786d33fccac50aa0f750f59036ca9f9aeae11dcb/WS2022_TP16_Phase2_Solution/USB_DEVICE/App/usbd_cdc_if.c#L273) values using ASCII characters in C.
+1. Knowing ASCII is essential, or at least understand how to [compare](https://github.com/ArthurZuliani/STM32L052WeatherStation/blob/786d33fccac50aa0f750f59036ca9f9aeae11dcb/WS2022_TP16_Phase2_Solution/USB_DEVICE/App/usbd_cdc_if.c#L273) values using ASCII characters in C.
 
 2. `Cortex-M0` does not support unaligned `read/write` [operations](https://github.com/ArthurZuliani/STM32L052WeatherStation/blob/786d33fccac50aa0f750f59036ca9f9aeae11dcb/WS2022_TP16_Phase2_Solution/Core/Src/main.c#L120).
 
